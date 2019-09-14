@@ -21,19 +21,19 @@ _start:
       
      ;bind_socket syscall  
      mov rax, 49    
-	   mov rsi, rsp
-	   mov rdx, 16
-	   syscall 
+     mov rsi, rsp
+     mov rdx, 16
+     syscall 
      
      ;listen syscall
      mov rax, 50
-	   mov rsi, 2
-	   syscall
+     mov rsi, 2
+     syscall
      
      ;accept syscall
      mov rax, 43
-	   sub rsp, 16
-	   mov rsi, rsp
+     sub rsp, 16
+     mov rsi, rsp
      mov byte [rsp-1], 16
      sub rsp, 1
      mov rdx, rsp
